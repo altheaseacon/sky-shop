@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SKY - Каталог | Вейп шоп & Кальянная лавка</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ШАПКА -->
+<div class="header">
+    <div class="logo">
+        <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: white;">
+            <img src="images/logo.png" alt="SKY" class="logo-img" onerror="this.src='https://via.placeholder.com/50x50?text=SKY'">
+            <div class="logo-text">
+                <h1>SKY</h1>
+                <p>вейп шоп & кальянная лавка</p>
+            </div>
+        </a>
+    </div>
+    <div class="user-cart">
+        <button class="icon-btn" id="profileBtn">👤 Аккаунт</button>
+        <button class="icon-btn" id="cartBtn">🛒 Корзина <span id="cartCountBadge" class="cart-count">0</span></button>
+    </div>
+</div>
+
+<!-- НАВИГАЦИЯ ПО КАТЕГОРИЯМ -->
+<div class="categories-nav" id="categoriesNav">
+    <button data-cat="tabak" class="cat-btn">🍃 Табак для кальяна</button>
+    <button data-cat="zhevatabak" class="cat-btn">💪 Жевательный табак</button>
+    <button data-cat="odnorazki" class="cat-btn">💨 Одноразки</button>
+    <button data-cat="podiki" class="cat-btn">📱 Подики</button>
+    <button data-cat="liquid" class="cat-btn">🧴 Жидкости</button>
+    <button data-cat="samokrutki" class="cat-btn">📰 Самокрутки/Сигариллы</button>
+</div>
+
+<!-- КАТАЛОГ -->
+<div class="container">
+    <div id="productsContainer" class="products-grid">
+        <!-- товары будут отрисованы через js -->
+    </div>
+</div>
+
+<!-- ПОДВАЛ -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <div class="footer-logo">
+                <h3>SKY</h3>
+                <p>вейп шоп & кальянная лавка</p>
+            </div>
+            <p>© 2024 SKY Store. Все права защищены.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Категории</h4>
+            <a href="catalog.html?cat=tabak">Табак для кальяна</a>
+            <a href="catalog.html?cat=zhevatabak">Жевательный табак</a>
+            <a href="catalog.html?cat=odnorazki">Одноразки</a>
+            <a href="catalog.html?cat=podiki">Подики</a>
+            <a href="catalog.html?cat=liquid">Жидкости</a>
+        </div>
+        <div class="footer-col">
+            <h4>Контакты</h4>
+            <p>📞 +7 (999) 123-45-67</p>
+            <p>📧 info@sky-shop.ru</p>
+            <p>📍 Москва, ул. Примерная, д. 123</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Модалки -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span>🛒 Моя корзина</span>
+            <span class="close-modal" id="closeCart">&times;</span>
+        </div>
+        <div id="cartItemsList"></div>
+        <div id="cartTotalPrice" class="cart-total"></div>
+        <button id="checkoutBtn" class="checkout-btn">✅ Оформить заказ (имитация)</button>
+    </div>
+</div>
+
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span>👤 Профиль / Вход</span>
+            <span class="close-modal" id="closeProfile">&times;</span>
+        </div>
+        <div id="profileStatus">Войдите, чтобы видеть заказы</div>
+        <div class="profile-field">
+            <input type="text" id="loginName" placeholder="Имя пользователя" value="Гость">
+        </div>
+        <div class="profile-field">
+            <input type="email" id="loginEmail" placeholder="Email" value="guest@sky.ru">
+        </div>
+        <button id="saveProfileBtn" class="btn-primary">💾 Сохранить профиль</button>
+        <button id="logoutProfileBtn" class="btn-primary btn-secondary">🚪 Сменить / Выйти</button>
+        <div class="profile-note">*для диплома, без реальной авторизации</div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/catalog.js"></script>
+</body>
+</html>

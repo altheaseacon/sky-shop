@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>SKY - Главная | Вейп шоп & Кальянная лавка</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Фоновые облака -->
+<div class="cloud-bg">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div class="cloud cloud4"></div>
+    <div class="cloud cloud5"></div>
+</div>
+<!-- ШАПКА -->
+<div class="header">
+    <div class="logo">
+        <img src="images/logo.png" alt="SKY" class="logo-img" onerror="this.src='https://via.placeholder.com/50x50?text=SKY'">
+        <div class="logo-text">
+            <h1>SKY</h1>
+            <p>вейп шоп & кальянная лавка</p>
+        </div>
+    </div>
+    <div class="user-cart">
+        <button class="icon-btn" id="profileBtn">👤 Аккаунт</button>
+        <button class="icon-btn" id="cartBtn">🛒 Корзина <span id="cartCountBadge" class="cart-count">0</span></button>
+    </div>
+</div>
+
+<!-- ГЛАВНЫЙ БАННЕР -->
+<section class="hero">  
+    <section class="venue">
+    <h2 class="section-title">🌟 Наше заведение</h2>
+    <div class="venue-grid">
+        <img src="images/venue/photo1.jpg" alt="Hookah Place">
+        <img src="images/venue/photo2.jpg" alt="Интерьер">
+        <img src="images/venue/photo3.jpg" alt="Атмосфера">
+    </div>
+</section>
+    <div class="hero-content">
+        <h1>Добро пожаловать в <span class="highlight">SKY</span></h1>
+        <p>Лучшие табаки, жидкости и устройства для настоящих ценителей</p>
+        <a href="catalog.html" class="hero-btn">Перейти в каталог →</a>
+    </div>
+    <div class="hero-stats">
+        <div class="stat">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Товаров</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">20+</span>
+            <span class="stat-label">Брендов</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label">Счастливых клиентов</span>
+        </div>
+    </div>
+</section>
+
+<!-- КАТЕГОРИИ (ИКОНКИ) -->
+<section class="categories-section">
+    <h2 class="section-title">🔥 Категории товаров</h2>
+    <div class="categories-grid">
+        <a href="catalog.html?cat=tabak" class="category-card">
+            <div class="category-icon">🍃</div>
+            <h3>Табак для кальяна</h3>
+            <p>Darkside, MustHave, Muassel и другие</p>
+        </a>
+        <a href="catalog.html?cat=zhevatabak" class="category-card">
+            <div class="category-icon">💪</div>
+            <h3>Жевательный табак</h3>
+            <p>Siberia, Odens, Iceberg, Corvus</p>
+        </a>
+        <a href="catalog.html?cat=odnorazki" class="category-card">
+            <div class="category-icon">💨</div>
+            <h3>Одноразки</h3>
+            <p>Elfbar, Lost Mary, Husky, Waka</p>
+        </a>
+        <a href="catalog.html?cat=podiki" class="category-card">
+            <div class="category-icon">📱</div>
+            <h3>Подики</h3>
+            <p>Vaporesso, Charon, Pasito, Novo</p>
+        </a>
+        <a href="catalog.html?cat=liquid" class="category-card">
+            <div class="category-icon">🧴</div>
+            <h3>Жидкости</h3>
+            <p>Duall, Husky, Vandal, Peredoz</p>
+        </a>
+        <a href="catalog.html?cat=samokrutki" class="category-card">
+            <div class="category-icon">📰</div>
+            <h3>Самокрутки</h3>
+            <p>Табак, сигариллы, бумажки</p>
+        </a>
+    </div>
+</section>
+
+<!-- ПОПУЛЯРНЫЕ ТОВАРЫ -->
+<section class="popular-section">
+    <h2 class="section-title">⭐ Популярные товары</h2>
+    <div class="products-grid" id="popularProducts">
+        <!-- Загрузятся через JS -->
+    </div>
+</section>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<section class="advantages">
+    <h2 class="section-title">Почему выбирают SKY?</h2>
+    <div class="advantages-grid">
+        <div class="advantage">
+            <div class="advantage-icon">🚚</div>
+            <h3>Быстрая доставка</h3>
+            <p>По Москве за 1-2 дня, по России от 3 дней</p>
+        </div>
+        <div class="advantage">
+            <div class="advantage-icon">✅</div>
+            <h3>Оригинальная продукция</h3>
+            <p>Только проверенные бренды и поставщики</p>
+        </div>
+        <div class="advantage">
+            <div class="advantage-icon">💬</div>
+            <h3>Поддержка 24/7</h3>
+            <p>Поможем с выбором и ответим на вопросы</p>
+        </div>
+        <div class="advantage">
+            <div class="advantage-icon">🎁</div>
+            <h3>Акции и скидки</h3>
+            <p>Регулярные распродажи и бонусы для постоянных</p>
+        </div>
+    </div>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section class="reviews">
+    <h2 class="section-title">💬 Отзывы наших клиентов</h2>
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Отличный магазин! Большой выбор табаков, быстрая доставка. Darkside всегда свежий!"</p>
+            <div class="review-author">— Александр, Москва</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Очень удобный сайт, нашел все что нужно. Корзина работает отлично, заказ оформил за 5 минут."</p>
+            <div class="review-author">— Екатерина, СПб</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Купил одноразку Husky Cyber 2.0 — огонь! И цена приятная. Буду заказывать еще."</p>
+            <div class="review-author">— Дмитрий, Казань</div>
+        </div>
+    </div>
+</section>
+
+<!-- ПОДПИСКА -->
+<section class="subscribe">
+    <div class="subscribe-content">
+        <h3>Будьте в курсе акций!</h3>
+        <p>Подпишитесь на рассылку и получайте персональные скидки</p>
+        <form class="subscribe-form" id="subscribeForm">
+            <input type="email" placeholder="Ваш email" required>
+            <button type="submit">Подписаться</button>
+        </form>
+    </div>
+</section>
+
+<!-- ПОДВАЛ -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <div class="footer-logo">
+                <h3>SKY</h3>
+                <p>вейп шоп & кальянная лавка</p>
+            </div>
+            <p>© 2024 SKY Store. Все права защищены.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Категории</h4>
+            <a href="catalog.html?cat=tabak">Табак для кальяна</a>
+            <a href="catalog.html?cat=zhevatabak">Жевательный табак</a>
+            <a href="catalog.html?cat=odnorazki">Одноразки</a>
+            <a href="catalog.html?cat=podiki">Подики</a>
+            <a href="catalog.html?cat=liquid">Жидкости</a>
+        </div>
+        <div class="footer-col">
+            <h4>Контакты</h4>
+            <p>📞 +7 (999) 123-45-67</p>
+            <p>📧 info@sky-shop.ru</p>
+            <p>📍 Москва, ул. Примерная, д. 123</p>
+        </div>
+        <div class="footer-col">
+            <h4>Режим работы</h4>
+            <p>Ежедневно: 10:00 - 21:00</p>
+            <p>Доставка: круглосуточно</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Модалки -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span>🛒 Моя корзина</span>
+            <span class="close-modal" id="closeCart">&times;</span>
+        </div>
+        <div id="cartItemsList"></div>
+        <div id="cartTotalPrice" class="cart-total"></div>
+        <button id="checkoutBtn" class="checkout-btn">✅ Оформить заказ (имитация)</button>
+    </div>
+</div>
+
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span>👤 Профиль / Вход</span>
+            <span class="close-modal" id="closeProfile">&times;</span>
+        </div>
+        <div id="profileStatus">Войдите, чтобы видеть заказы</div>
+        <div class="profile-field">
+            <input type="text" id="loginName" placeholder="Имя пользователя" value="Гость">
+        </div>
+        <div class="profile-field">
+            <input type="email" id="loginEmail" placeholder="Email" value="guest@sky.ru">
+        </div>
+        <button id="saveProfileBtn" class="btn-primary">💾 Сохранить профиль</button>
+        <button id="logoutProfileBtn" class="btn-primary btn-secondary">🚪 Сменить / Выйти</button>
+        <div class="profile-note"></div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
