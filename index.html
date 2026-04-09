@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script src="js/api.js"></script>
+    <script src="js/auth-ui.js"></script>
 <!-- Фоновые облака -->
 <div class="cloud-bg">
     <div class="cloud cloud1"></div>
@@ -219,16 +221,53 @@
             <span>👤 Профиль / Вход</span>
             <span class="close-modal" id="closeProfile">&times;</span>
         </div>
-        <div id="profileStatus">Войдите, чтобы видеть заказы</div>
-        <div class="profile-field">
-            <input type="text" id="loginName" placeholder="Имя пользователя" value="Гость">
+        
+        <!-- Форма входа/регистрации (показывается если не авторизован) -->
+        <div id="authForms">
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Вход</button>
+                <button class="auth-tab" data-tab="register">Регистрация</button>
+            </div>
+            
+            <!-- Форма входа -->
+            <div id="loginForm" class="auth-form active">
+                <div class="profile-field">
+                    <input type="email" id="loginEmail" placeholder="Email">
+                </div>
+                <div class="profile-field">
+                    <input type="password" id="loginPassword" placeholder="Пароль">
+                </div>
+                <button id="doLoginBtn" class="btn-primary">Войти</button>
+                <div id="loginError" class="auth-error"></div>
+            </div>
+            
+            <!-- Форма регистрации -->
+            <div id="registerForm" class="auth-form">
+                <div class="profile-field">
+                    <input type="text" id="regName" placeholder="Имя">
+                </div>
+                <div class="profile-field">
+                    <input type="email" id="regEmail" placeholder="Email">
+                </div>
+                <div class="profile-field">
+                    <input type="password" id="regPassword" placeholder="Пароль (мин. 6 символов)">
+                </div>
+                <button id="doRegisterBtn" class="btn-primary">Зарегистрироваться</button>
+                <div id="registerError" class="auth-error"></div>
+            </div>
         </div>
-        <div class="profile-field">
-            <input type="email" id="loginEmail" placeholder="Email" value="guest@sky.ru">
+        
+        <!-- Информация о пользователе (показывается если авторизован) -->
+        <div id="userInfo" style="display: none;">
+            <div class="user-avatar">👤</div>
+            <div class="user-details">
+                <div id="userName" class="user-name"></div>
+                <div id="userEmail" class="user-email"></div>
+            </div>
+            <button id="logoutBtn" class="btn-secondary">Выйти</button>
         </div>
-        <button id="saveProfileBtn" class="btn-primary">💾 Сохранить профиль</button>
-        <button id="logoutProfileBtn" class="btn-primary btn-secondary">🚪 Сменить / Выйти</button>
-        <div class="profile-note"></div>
+        
+        <div class="profile-note">*Ваши данные сохраняются на сервере</div>
     </div>
 </div>
 
